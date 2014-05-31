@@ -1,0 +1,24 @@
+How to init repo locally and then push it to github (usefull when creating i.e. Maven project first)
+1. Go to your account at https://github.com
+2. Go to Repositories tab and press New
+3. Create public repo, because there are some limitations to have a  private repo, and fill all inputs.
+4. Create repo without readme
+5. Then, create Maven project, where you want.
+6. Then follow instructions:
+7. git init
+8. create, add, and commit  README.md
+9. git remote add origin git@github.com:akubyshkin/test-spring2.git
+10.to work with repo, modify your .git/config accorfing to your ~/.ssh/config file:
+~/ssh.config:
+# Для доступа к github
+        Host github
+        HostName        github.com
+        User            git
+        IdentityFile    ~/.ssh/id_github
+.git/config:
+[remote "origin"]
+>...url = github:akubyshkin/test2.git
+>...fetch = +refs/heads/*:refs/remotes/origin/*
+11. git push -u origin master
+
+THIS INSTRUCTION SUPPOSES YOU HAVE PUBLIC-PRIVATE KEY PAIR TO WORK WITH GITHUB
