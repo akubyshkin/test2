@@ -22,3 +22,5 @@ How to init repo locally and then push it to github (usefull when creating i.e. 
 11. git push -u origin master
 
 THIS INSTRUCTION SUPPOSES YOU HAVE PUBLIC-PRIVATE KEY PAIR TO WORK WITH GITHUB
+
+PS. unfortunately all eclipse workspace files were created in the project directory. So I had to use .gitignore file.
